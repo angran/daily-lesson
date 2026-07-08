@@ -1,0 +1,61 @@
+<!doctype html><html lang="zh"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>每日小课堂 · 题目库</title><style>
+:root{
+  --paper:#f5f4ef; --ink:#272d30; --muted:#7c848a;
+  --board:#2b4a40; --board2:#356152; --chalk:#eef2ea;
+  --accent:#df6c34; --line:#e7e5db; --card:#ffffff;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--paper)}
+.wrap{max-width:680px;margin:0 auto;padding:18px 16px 48px;
+  font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Microsoft YaHei",sans-serif;
+  color:var(--ink);-webkit-font-smoothing:antialiased}
+.masthead{background:linear-gradient(135deg,var(--board),var(--board2));
+  color:var(--chalk);border-radius:16px;padding:22px 20px;
+  box-shadow:0 6px 20px rgba(30,50,44,.18)}
+.masthead h1{margin:0;font-size:23px;letter-spacing:.5px;text-wrap:balance}
+.masthead p{margin:8px 0 0;font-size:13.5px;color:#cfe0d7;line-height:1.6}
+.count{display:inline-block;margin-top:12px;font-size:12px;
+  background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.22);
+  padding:3px 10px;border-radius:999px;letter-spacing:.3px}
+.toc{margin:16px 0 6px;display:flex;flex-wrap:wrap;gap:8px;align-items:center}
+.toc .lbl{font-size:12px;color:var(--muted)}
+.toc a{font-size:13px;text-decoration:none;color:var(--board);
+  background:var(--card);border:1px solid var(--line);
+  padding:4px 10px;border-radius:999px;font-variant-numeric:tabular-nums}
+.toc a:hover{border-color:var(--accent);color:var(--accent)}
+.day{background:var(--card);border:1px solid var(--line);border-radius:14px;
+  padding:16px 16px 6px;margin:14px 0;box-shadow:0 2px 8px rgba(40,50,45,.05)}
+.day > .date{display:flex;align-items:center;gap:8px;
+  font-size:15px;font-weight:700;color:var(--board);
+  padding-bottom:10px;margin-bottom:8px;border-bottom:2px dashed var(--line);
+  font-variant-numeric:tabular-nums}
+.day > .date .dot{width:9px;height:9px;border-radius:50%;background:var(--accent);flex:none}
+footer{margin-top:28px;text-align:center;color:var(--muted);font-size:12px;line-height:1.7}
+a:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+</style></head><body><div class="wrap"><div class="masthead"><h1>📚 每日小课堂 · 题目库</h1><p>给 Leon(7)· Anna(10)· Annie(12) —— 每天一题,开眼界、逗一乐。</p><span class="count">共 1 天</span></div><div class="toc"><span class="lbl">目录:</span><a href="#d2026-07-08">2026-07-08</a></div><div class="day" id="d2026-07-08"><div class="date"><span class="dot"></span>2026-07-08 · 星期三</div><div style="font-family:-apple-system,'PingFang SC','Microsoft YaHei',sans-serif;font-size:16px;line-height:1.7;color:#222;max-width:640px">
+<p style="font-size:18px;font-weight:700;margin:0 0 16px">主题:数字里藏着的魔法</p>
+
+<div style="margin:0 0 18px;padding:12px 14px;background:#f5f8ff;border-radius:10px">
+<p style="margin:0 0 6px;font-weight:700">🧒 Leon(7岁)· 高斯的"闪电求和"</p>
+<p style="margin:0 0 8px">两百多年前德国小男孩高斯,老师罚全班"把 1 加到 100 才能走",别人一个个加,他几秒就算出来了。秘诀是<b>头尾配对</b>:1+10=11、2+9=11……1 到 10 有 5 个 11 = <b>55</b>。</p>
+<p style="margin:0"><b>挑战:</b>①自己配对算 <b>1 加到 20</b>(1+20=21,共 10 对 → 10×21=<b>210</b>)。②敢试老师那道真题 <b>1 加到 100</b> 吗?(1+100=101,50 对 → 50×101=<b>5050</b>,这就是真实的高斯故事!)</p>
+</div>
+
+<div style="margin:0 0 18px;padding:12px 14px;background:#f2fbf4;border-radius:10px">
+<p style="margin:0 0 6px;font-weight:700">🧑 Anna(10岁)· 尾数是 5 的平方,一秒报答案</p>
+<p style="margin:0 0 8px">个位是 5 的两位数,平方口诀:<b>十位 ×(十位+1),后面接 25</b>。</p>
+<p style="margin:0 0 8px">25²→2×3=6→<b>625</b>;35²→3×4=12→<b>1225</b>;45²→4×5=20→<b>2025</b>(明年!)。</p>
+<p style="margin:0"><b>挑战:</b>65²、85² = ?(答案 <b>4225</b>、<b>7225</b>)</p>
+</div>
+
+<div style="margin:0 0 18px;padding:12px 14px;background:#fff7f0;border-radius:10px">
+<p style="margin:0 0 6px;font-weight:700">🧑‍🦱 Annie(12岁)· 为什么这个魔法一定成立</p>
+<p style="margin:0 0 8px">个位是 5 的数写成 10a+5:(10a+5)² = 100a²+100a+25 = <b>100·a(a+1)+25</b>。a(a+1) 就是"十位×(十位+1)",×100 再 +25,正好是口诀!</p>
+<p style="margin:0"><b>挑战:</b>三位数 115² 还灵吗?(a=11,11×12=132,接 25 → <b>13225</b>,灵!)</p>
+</div>
+
+<p style="margin:0;padding:12px 14px;background:#fdf6e3;border-radius:10px">😄 <b>全家段子</b> —— 问:为什么暑假一定比寒假长?　答:<b>热胀冷缩</b>!</p>
+</div>
+</div><footer>每天早上自动更新 · 由「每日小课堂」生成</footer></div></body></html>
