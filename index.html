@@ -140,9 +140,27 @@ a:focus-visible,button:focus-visible{outline:2px solid var(--accent);outline-off
 <p style="margin:0 0 4px;font-weight:700">💡 规则(超好玩)</p>
 <p style="margin:0">任选一个数:<b>偶数就 ÷2,奇数就 ×3+1</b>,一直重复。传说不管从哪个数开始,最后都会掉到 <b>1</b>(然后 1→4→2→1 转圈圈)。</p>
 </div>
+
+<figure style="margin:0 0 14px">
+<svg viewBox="0 0 480 200" style="width:100%;max-width:460px;height:auto;display:block;margin:0 auto" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="从7出发的冰雹数路径,数字忽高忽低最后落到1">
+  <line x1="20" y1="185" x2="460" y2="185" stroke="#c9c7bd" stroke-width="2"/>
+  <polyline points="30,166.1 56,125.6 82,155.3 108,93.2 134,139.1 160,45 186,114.8 212,149.9 238,77 264,131 290,158 316,171.5 342,141.8 368,163.4 394,174.2 420,179.6 446,182.3" fill="none" stroke="#df6c34" stroke-width="2.5" stroke-linejoin="round"/>
+  <g fill="#2b4a40">
+    <circle cx="30" cy="166.1" r="3"/><circle cx="56" cy="125.6" r="3"/><circle cx="82" cy="155.3" r="3"/><circle cx="108" cy="93.2" r="3"/><circle cx="134" cy="139.1" r="3"/><circle cx="160" cy="45" r="3"/><circle cx="186" cy="114.8" r="3"/><circle cx="212" cy="149.9" r="3"/><circle cx="238" cy="77" r="3"/><circle cx="264" cy="131" r="3"/><circle cx="290" cy="158" r="3"/><circle cx="316" cy="171.5" r="3"/><circle cx="342" cy="141.8" r="3"/><circle cx="368" cy="163.4" r="3"/><circle cx="394" cy="174.2" r="3"/><circle cx="420" cy="179.6" r="3"/>
+  </g>
+  <circle cx="446" cy="182.3" r="5" fill="#5fb37a"/>
+  <g font-family="sans-serif" font-size="11" fill="#555">
+    <text x="30" y="158" text-anchor="middle" font-weight="700" fill="#b1531d">7</text>
+    <text x="160" y="38" text-anchor="middle" font-weight="700" fill="#b1531d">52</text>
+    <text x="446" y="175" text-anchor="middle" font-weight="700" fill="#2f7d4f">1</text>
+  </g>
+</svg>
+<figcaption style="text-align:center;font-size:12px;color:#7c848a;margin-top:4px">从 <b>7</b> 出发:7→22→11→34→17→<b>52</b>→…→2→<b>1</b>。数字像冰雹忽上忽下,最后落到 1。</figcaption>
+</figure>
+
 <div style="margin:0 0 14px;padding:12px 14px;background:#f2fbf4;border-radius:10px">
 <p style="margin:0 0 4px;font-weight:700">🎮 怎么玩(Leon &amp; Anna)</p>
-<p style="margin:0">从 6 开始:6→3→10→5→16→8→4→2→<b>1</b>。挑战:从 <b>7</b> 开始(要走 16 步才到 1!);再试 <b>27</b>——它会一路飙到 <b>9232</b> 再慢慢落地,像坐过山车!</p>
+<p style="margin:0">从 6 开始:6→3→10→5→16→8→4→2→<b>1</b>。挑战:从 <b>7</b> 开始(要走 16 步才到 1,就是上图!);再试 <b>27</b>——它会一路飙到 <b>9232</b> 再慢慢落地,像坐过山车!</p>
 </div>
 <div style="margin:0;padding:12px 14px;background:#fff7f0;border-radius:10px">
 <p style="margin:0 0 4px;font-weight:700">🤯 为什么难(Annie)</p>
@@ -153,19 +171,83 @@ a:focus-visible,button:focus-visible{outline:2px solid var(--accent);outline-off
 <p style="margin:0 0 4px;font-weight:700">💡 三百年前的老难题</p>
 <p style="margin:0">一座叫柯尼斯堡的城市有 <b>7 座桥</b>。人们想:能不能从家出发,<b>每座桥只走一次</b>,把 7 座桥全部走遍?试了无数次都失败。</p>
 </div>
+
+<figure style="margin:0 0 14px">
+<svg viewBox="0 0 480 470" style="width:100%;max-width:440px;height:auto;display:block;margin:0 auto" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="柯尼斯堡七桥地图与点线图">
+  <!-- 地图 -->
+  <rect x="0" y="0" width="480" height="52" rx="6" fill="#dfe7d8" stroke="#9bb38a"/>
+  <rect x="0" y="52" width="480" height="164" fill="#d7ecf5"/>
+  <rect x="0" y="216" width="480" height="52" rx="6" fill="#dfe7d8" stroke="#9bb38a"/>
+  <ellipse cx="150" cy="134" rx="66" ry="44" fill="#dfe7d8" stroke="#9bb38a"/>
+  <ellipse cx="360" cy="134" rx="54" ry="40" fill="#dfe7d8" stroke="#9bb38a"/>
+  <g stroke="#b98a52" stroke-width="10" stroke-linecap="round">
+    <line x1="112" y1="96" x2="98" y2="52"/>
+    <line x1="182" y1="94" x2="196" y2="52"/>
+    <line x1="112" y1="172" x2="98" y2="216"/>
+    <line x1="182" y1="174" x2="196" y2="216"/>
+    <line x1="360" y1="94" x2="360" y2="52"/>
+    <line x1="360" y1="174" x2="360" y2="216"/>
+    <line x1="214" y1="134" x2="306" y2="134"/>
+  </g>
+  <g font-family="sans-serif" font-size="14" fill="#4a6b3e" font-weight="700">
+    <text x="12" y="31">北岸 A</text>
+    <text x="12" y="249">南岸 B</text>
+    <text x="150" y="139" text-anchor="middle">岛 C</text>
+    <text x="360" y="139" text-anchor="middle">东岸 D</text>
+  </g>
+  <text x="240" y="298" text-anchor="middle" font-family="sans-serif" font-size="12.5" fill="#7c848a">把每块地画成一个点、每座桥画成一条线,数每个点连几条线:</text>
+  <!-- 点线图 -->
+  <g stroke="#b98a52" stroke-width="4" fill="none">
+    <path d="M240,314 Q168,332 120,388"/>
+    <path d="M240,314 Q192,371 120,388"/>
+    <path d="M120,388 Q150,444 240,460"/>
+    <path d="M120,388 Q210,404 240,460"/>
+    <line x1="240" y1="314" x2="360" y2="388"/>
+    <line x1="240" y1="460" x2="360" y2="388"/>
+    <line x1="120" y1="388" x2="360" y2="388"/>
+  </g>
+  <g font-family="sans-serif" text-anchor="middle">
+    <g><circle cx="240" cy="314" r="22" fill="#2b4a40"/><text x="240" y="311" font-size="15" font-weight="700" fill="#fff">A</text><text x="240" y="325" font-size="10" fill="#ffd9b0">3</text></g>
+    <g><circle cx="120" cy="388" r="22" fill="#df6c34"/><text x="120" y="385" font-size="15" font-weight="700" fill="#fff">C</text><text x="120" y="399" font-size="10" fill="#fff">5</text></g>
+    <g><circle cx="360" cy="388" r="22" fill="#2b4a40"/><text x="360" y="385" font-size="15" font-weight="700" fill="#fff">D</text><text x="360" y="399" font-size="10" fill="#ffd9b0">3</text></g>
+    <g><circle cx="240" cy="460" r="22" fill="#2b4a40"/><text x="240" y="457" font-size="15" font-weight="700" fill="#fff">B</text><text x="240" y="471" font-size="10" fill="#ffd9b0">3</text></g>
+  </g>
+</svg>
+<figcaption style="text-align:center;font-size:12px;color:#7c848a;margin-top:4px">7 座桥(上)→ 变成"点和线"(下):4 个点连的桥数是 3、3、3、<b>5</b>,<b>全是奇数</b>。</figcaption>
+</figure>
+
 <div style="margin:0 0 14px;padding:12px 14px;background:#f2fbf4;border-radius:10px">
 <p style="margin:0 0 4px;font-weight:700">🎮 怎么玩(Leon &amp; Anna)· 一笔画</p>
-<p style="margin:0">在纸上画点和线,做"<b>一笔画</b>":<b>笔不离纸、每条线只描一遍</b>,把整个图形画完。试试信封"⧖"形、五角星,哪些能画成、哪些画不成?</p>
+<p style="margin:0">在纸上画点和线,做"<b>一笔画</b>":<b>笔不离纸、每条线只描一遍</b>,把整个图形画完。试试信封形、五角星,哪些能画成、哪些画不成?</p>
 </div>
 <div style="margin:0;padding:12px 14px;background:#fff7f0;border-radius:10px">
 <p style="margin:0 0 4px;font-weight:700">🤯 秘诀与难点(Annie)</p>
-<p style="margin:0">大数学家<b>欧拉</b>发现规律:数每个点连出<b>几条线</b>,只有当"连着<b>奇数</b>条线的点"是 <b>0 个或正好 2 个</b>时才画得成。柯尼斯堡 4 块陆地全连着奇数座桥 → <b>根本走不成</b>!这道小题开创了整个数学新分支——<b>图论</b>。</p>
+<p style="margin:0">大数学家<b>欧拉</b>发现规律:只有当"连着<b>奇数</b>条线的点"是 <b>0 个或正好 2 个</b>时才画得成。上图 4 个点全是奇数(3、3、3、5)→ <b>根本走不成</b>!这道小题开创了整个数学新分支——<b>图论</b>。</p>
 </div>
 </div></div><div class="card" data-cat="挑战题"><div class="chead"><span class="dot"></span><span>🧩 挑战题</span><span class="tag extra">四色地图 —— 任何地图只用 4 种颜色?</span><span class="tag note">学有余力做</span></div><div style="font-family:-apple-system,'PingFang SC','Microsoft YaHei',sans-serif;font-size:16px;line-height:1.7;color:#222;max-width:640px">
 <div style="margin:0 0 14px;padding:12px 14px;background:#f5f8ff;border-radius:10px">
 <p style="margin:0 0 4px;font-weight:700">💡 一句话</p>
 <p style="margin:0">世界上<b>任何一张地图</b>,只要 <b>4 种颜色</b>,就能让每两个相邻的地区都<b>不同色</b>(只碰一个点不算相邻)。</p>
 </div>
+
+<figure style="margin:0 0 14px">
+<svg viewBox="0 0 480 262" style="width:100%;max-width:360px;height:auto;display:block;margin:0 auto" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="用四种颜色涂的地图,相邻区域颜色都不同">
+  <g stroke="#33403a" stroke-width="3" stroke-linejoin="round">
+    <path d="M240,82 L240,15 A115,115 0 0 1 349.4,94.5 L285.6,115.2 A48,48 0 0 0 240,82 Z" fill="#5b8def"/>
+    <path d="M285.6,115.2 L349.4,94.5 A115,115 0 0 1 307.6,223 L268.2,168.8 A48,48 0 0 0 285.6,115.2 Z" fill="#f2c94c"/>
+    <path d="M268.2,168.8 L307.6,223 A115,115 0 0 1 172.4,223 L211.8,168.8 A48,48 0 0 0 268.2,168.8 Z" fill="#5b8def"/>
+    <path d="M211.8,168.8 L172.4,223 A115,115 0 0 1 130.6,94.5 L194.4,115.2 A48,48 0 0 0 211.8,168.8 Z" fill="#f2c94c"/>
+    <path d="M194.4,115.2 L130.6,94.5 A115,115 0 0 1 240,15 L240,82 A48,48 0 0 0 194.4,115.2 Z" fill="#5fb37a"/>
+    <circle cx="240" cy="130" r="48" fill="#e9724c"/>
+  </g>
+  <g font-family="sans-serif" font-size="15" font-weight="700" fill="#fff" text-anchor="middle">
+    <text x="287" y="70">2</text><text x="317" y="160">3</text><text x="240" y="216">2</text>
+    <text x="163" y="160">3</text><text x="192" y="70">4</text><text x="240" y="136">1</text>
+  </g>
+</svg>
+<figcaption style="text-align:center;font-size:12px;color:#7c848a;margin-top:4px">中间的国家挨着外圈 5 个邻国 —— 试着只用 <b>3</b> 种颜色?永远差一种,<b>非 4 种不可</b>。</figcaption>
+</figure>
+
 <div style="margin:0 0 14px;padding:12px 14px;background:#f2fbf4;border-radius:10px">
 <p style="margin:0 0 4px;font-weight:700">🎮 怎么玩(Leon &amp; Anna)</p>
 <p style="margin:0">找一张<b>中国省份图</b>或世界地图,只用 <b>4 支彩笔</b>,把每个地区涂色,让挨着的两块永远不一样。真的能做到吗?自己画一张古怪地图考考爸爸妈妈!</p>
@@ -179,6 +261,53 @@ a:focus-visible,button:focus-visible{outline:2px solid var(--accent);outline-off
 <p style="margin:0 0 4px;font-weight:700">💡 一句话</p>
 <p style="margin:0">相差正好 <b>2</b> 的两个质数,叫"<b>孪生素数</b>"(双胞胎质数),像 (3,5)、(5,7)、(11,13)、(17,19)。</p>
 </div>
+
+<figure style="margin:0 0 14px">
+<svg viewBox="0 0 480 120" style="width:100%;max-width:460px;height:auto;display:block;margin:0 auto" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="30以内的质数与孪生素数对数轴">
+  <line x1="12" y1="80" x2="470" y2="80" stroke="#c9c7bd" stroke-width="2"/>
+  <!-- 孪生对连弧 -->
+  <g stroke="#4a6b8f" stroke-width="2" fill="none">
+    <path d="M48.6,70 Q63.9,44 79.2,70"/>
+    <path d="M79.2,70 Q94.5,44 109.8,70"/>
+    <path d="M171,70 Q186.3,44 201.6,70"/>
+    <path d="M262.8,70 Q278.1,44 293.4,70"/>
+  </g>
+  <g font-family="sans-serif" font-size="9" fill="#4a6b8f" text-anchor="middle">
+    <text x="63.9" y="40">2</text><text x="94.5" y="40">2</text><text x="186.3" y="40">2</text><text x="278.1" y="40">2</text>
+  </g>
+  <!-- 质数(橙点)与合数(灰点) -->
+  <g>
+    <circle cx="33.3" cy="80" r="2" fill="#c2c0b6"/>
+    <circle cx="48.6" cy="80" r="6" fill="#df6c34"/>
+    <circle cx="63.9" cy="80" r="2" fill="#c2c0b6"/>
+    <circle cx="79.2" cy="80" r="6" fill="#df6c34"/>
+    <circle cx="94.5" cy="80" r="2" fill="#c2c0b6"/>
+    <circle cx="109.8" cy="80" r="6" fill="#df6c34"/>
+    <circle cx="125.1" cy="80" r="2" fill="#c2c0b6"/>
+    <circle cx="140.4" cy="80" r="2" fill="#c2c0b6"/>
+    <circle cx="155.7" cy="80" r="2" fill="#c2c0b6"/>
+    <circle cx="171" cy="80" r="6" fill="#df6c34"/>
+    <circle cx="186.3" cy="80" r="2" fill="#c2c0b6"/>
+    <circle cx="201.6" cy="80" r="6" fill="#df6c34"/>
+    <circle cx="216.9" cy="80" r="2" fill="#c2c0b6"/>
+    <circle cx="232.2" cy="80" r="2" fill="#c2c0b6"/>
+    <circle cx="247.5" cy="80" r="2" fill="#c2c0b6"/>
+    <circle cx="262.8" cy="80" r="6" fill="#df6c34"/>
+    <circle cx="278.1" cy="80" r="2" fill="#c2c0b6"/>
+    <circle cx="293.4" cy="80" r="6" fill="#df6c34"/>
+    <circle cx="354" cy="80" r="6" fill="#df6c34"/>
+    <circle cx="447.6" cy="80" r="6" fill="#df6c34"/>
+  </g>
+  <!-- 关键数字标注 -->
+  <g font-family="sans-serif" font-size="10" fill="#555" text-anchor="middle">
+    <text x="48.6" y="100">3</text><text x="79.2" y="100">5</text><text x="109.8" y="100">7</text>
+    <text x="171" y="100">11</text><text x="201.6" y="100">13</text><text x="262.8" y="100">17</text>
+    <text x="293.4" y="100">19</text><text x="354" y="100">23</text><text x="447.6" y="100">29</text>
+  </g>
+</svg>
+<figcaption style="text-align:center;font-size:12px;color:#7c848a;margin-top:4px">橙点是质数;弧线连着差 2 的"双胞胎"。注意 <b>5</b> 同时属于 (3,5) 和 (5,7) 两对!</figcaption>
+</figure>
+
 <div style="margin:0 0 14px;padding:12px 14px;background:#f2fbf4;border-radius:10px">
 <p style="margin:0 0 4px;font-weight:700">🎮 怎么玩(Leon &amp; Anna)</p>
 <p style="margin:0">找出 <b>100 以内</b>所有的孪生素数对——一共 <b>8 对</b>,你能全找齐吗?(小提示:先把 100 以内的质数列出来,再看哪两个只差 2。)</p>
