@@ -2,12 +2,12 @@
 :root{
   --paper:#f5f4ef; --ink:#272d30; --muted:#7c848a;
   --board:#2b4a40; --board2:#356152; --chalk:#eef2ea;
-  --accent:#df6c34; --line:#e7e5db; --card:#ffffff;
+  --accent:#df6c34; --line:#e7e5db; --card:#ffffff; --side:#fbfaf6;
 }
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
 body{margin:0;background:var(--paper)}
-.wrap{max-width:680px;margin:0 auto;padding:18px 16px 48px;
+.wrap{max-width:920px;margin:0 auto;padding:18px 16px 48px;
   font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Microsoft YaHei",sans-serif;
   color:var(--ink);-webkit-font-smoothing:antialiased}
 .masthead{background:linear-gradient(135deg,var(--board),var(--board2));
@@ -18,23 +18,42 @@ body{margin:0;background:var(--paper)}
 .count{display:inline-block;margin-top:12px;font-size:12px;
   background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.22);
   padding:3px 10px;border-radius:999px;letter-spacing:.3px}
-.toc{margin:16px 0 6px;display:flex;flex-wrap:wrap;gap:8px;align-items:center}
-.toc .lbl{font-size:12px;color:var(--muted)}
-.toc a{font-size:13px;text-decoration:none;color:var(--board);
-  background:var(--card);border:1px solid var(--line);
-  padding:4px 10px;border-radius:999px;font-variant-numeric:tabular-nums}
-.toc a:hover{border-color:var(--accent);color:var(--accent)}
-.day{background:var(--card);border:1px solid var(--line);border-radius:14px;
-  padding:16px 16px 6px;margin:14px 0;box-shadow:0 2px 8px rgba(40,50,45,.05)}
-.day > .date{display:flex;align-items:center;gap:8px;
-  font-size:15px;font-weight:700;color:var(--board);
-  padding-bottom:10px;margin-bottom:8px;border-bottom:2px dashed var(--line);
+.layout{display:flex;gap:18px;align-items:flex-start;margin-top:16px}
+.side{position:sticky;top:14px;flex:0 0 176px;display:flex;flex-direction:column;gap:6px}
+.side .sTitle{font-size:12px;color:var(--muted);padding:2px 8px;letter-spacing:.3px}
+.side button{display:flex;justify-content:space-between;align-items:center;gap:8px;
+  width:100%;text-align:left;cursor:pointer;font-family:inherit;font-size:14px;
+  color:var(--board);background:var(--side);border:1px solid var(--line);
+  padding:9px 12px;border-radius:10px;transition:.15s}
+.side button:hover{border-color:var(--accent);color:var(--accent)}
+.side button.on{background:var(--board);color:#fff;border-color:var(--board)}
+.side button .n{font-size:11px;font-variant-numeric:tabular-nums;
+  background:rgba(0,0,0,.06);color:var(--muted);padding:1px 7px;border-radius:999px}
+.side button.on .n{background:rgba(255,255,255,.22);color:#fff}
+.main{flex:1 1 auto;min-width:0}
+.viewhint{font-size:12.5px;color:var(--muted);margin:2px 0 10px;padding:0 2px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:14px;
+  padding:16px 16px 6px;margin:0 0 14px;box-shadow:0 2px 8px rgba(40,50,45,.05)}
+.card > .chead{display:flex;align-items:center;flex-wrap:wrap;gap:8px;
+  font-size:14.5px;font-weight:700;color:var(--board);
+  padding-bottom:10px;margin-bottom:10px;border-bottom:2px dashed var(--line);
   font-variant-numeric:tabular-nums}
-.day > .date .dot{width:9px;height:9px;border-radius:50%;background:var(--accent);flex:none}
+.card > .chead .dot{width:9px;height:9px;border-radius:50%;background:var(--accent);flex:none}
+.tag{font-size:11px;font-weight:600;padding:2px 9px;border-radius:999px;
+  background:#eef4f1;color:var(--board2);border:1px solid var(--line)}
+.tag.extra{background:#fdeede;color:#a4531d;border-color:#f3d7b6}
+.tag.note{background:#f0f0ef;color:var(--muted)}
+.empty{display:none;text-align:center;color:var(--muted);font-size:14px;padding:40px 0}
 footer{margin-top:28px;text-align:center;color:var(--muted);font-size:12px;line-height:1.7}
-a:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+a:focus-visible,button:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+@media (max-width:640px){
+  .layout{flex-direction:column}
+  .side{position:static;flex:none;width:100%;flex-direction:row;flex-wrap:wrap}
+  .side .sTitle{display:none}
+  .side button{width:auto;flex:1 1 auto}
+}
 @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
-</style></head><body><div class="wrap"><div class="masthead"><h1>📚 每日小课堂 · 题目库</h1><p>给 Leon(7)· Anna(10)· Annie(12) —— 每天一题,开眼界、逗一乐。</p><span class="count">共 2 天</span></div><div class="toc"><span class="lbl">目录:</span><a href="#d2026-07-09">2026-07-09</a><a href="#d2026-07-08">2026-07-08</a></div><div class="day" id="d2026-07-09"><div class="date"><span class="dot"></span>2026-07-09 · 星期四</div><div style="font-family:-apple-system,'PingFang SC','Microsoft YaHei',sans-serif;font-size:16px;line-height:1.7;color:#222;max-width:640px">
+</style></head><body><div class="wrap"><div class="masthead"><h1>📚 每日小课堂 · 题目库</h1><p>给 Leon(7)· Anna(10)· Annie(12) —— 每天一题开眼界;学有余力,再挑战下面的"世界难题"。</p><span class="count">📅 3 天　·　🧩 5 道挑战题</span></div><div class="layout"><aside class="side"><div class="sTitle">分类浏览</div><button class="on" data-filter="all">📅 全部(按日期)<span class="n">8</span></button><button data-filter="巧算">🧮 巧算<span class="n">2</span></button><button data-filter="科学百科">🔬 科学百科<span class="n">0</span></button><button data-filter="名人故事">👤 名人故事<span class="n">1</span></button><button data-filter="谜语笑话">🎭 谜语·笑话<span class="n">0</span></button><button data-filter="挑战题">🧩 挑战题<span class="n">5</span></button></aside><main class="main"><div class="viewhint" id="viewhint">按日期显示全部内容(最新在上)。点左侧类别可只看某一类。</div><div class="card" data-cat="名人故事"><div class="chead"><span class="dot"></span><span>2026-07-09 · 星期四</span><span class="tag">👤 名人故事</span><span class="tag note">居里夫人</span></div><div style="font-family:-apple-system,'PingFang SC','Microsoft YaHei',sans-serif;font-size:16px;line-height:1.7;color:#222;max-width:640px">
 <p style="font-size:18px;font-weight:700;margin:0 0 4px">主题:两次拿到大奖的科学家 —— 居里夫人</p>
 <p style="margin:0 0 16px;color:#666;font-size:14px">名人故事 · 7月9日周四</p>
 
@@ -57,8 +76,30 @@ a:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
 </div>
 
 <p style="margin:0;padding:12px 14px;background:#fdf6e3;border-radius:10px">😄 <b>全家段子</b> —— 问:为什么说蚕宝宝很有钱?　答:因为它很会<b>结茧</b>(谐音"<b>节俭</b>")!(就像居里夫人一样,又会攒宝贝、又不铺张~)</p>
+</div></div><div class="card" data-cat="巧算"><div class="chead"><span class="dot"></span><span>2026-07-09 · 星期四</span><span class="tag">🧮 巧算</span><span class="tag note">斐波那契数列(黄金比)</span><span class="tag note">试跑</span></div><div style="font-family:-apple-system,'PingFang SC','Microsoft YaHei',sans-serif;font-size:16px;line-height:1.7;color:#222;max-width:640px">
+<p style="font-size:18px;font-weight:700;margin:0 0 16px">主题:大自然的数字密码 · 斐波那契数列</p>
+
+<div style="margin:0 0 18px;padding:12px 14px;background:#f5f8ff;border-radius:10px">
+<p style="margin:0 0 6px;font-weight:700">🧒 Leon(7岁)· 会"长大"的神奇数列</p>
+<p style="margin:0 0 8px">看这串数字:<b>1、1、2、3、5、8、13……</b> 发现规律了吗?每个数 = 前面两个数加起来!(1+1=2,2+3=5,5+8=13)</p>
+<p style="margin:0 0 8px"><b>挑战:</b>接着往下写 3 个!(提示:8+13=<b>21</b>,13+21=<b>34</b>,21+34=<b>55</b>)</p>
+<p style="margin:0">🌼 <b>小彩蛋:</b>去数数花的花瓣,很多花正好是 3、5、8、13 瓣——就是这串数字!</p>
 </div>
-</div><div class="day" id="d2026-07-08"><div class="date"><span class="dot"></span>2026-07-08 · 星期三</div><div style="font-family:-apple-system,'PingFang SC','Microsoft YaHei',sans-serif;font-size:16px;line-height:1.7;color:#222;max-width:640px">
+
+<div style="margin:0 0 18px;padding:12px 14px;background:#f2fbf4;border-radius:10px">
+<p style="margin:0 0 6px;font-weight:700">🧑 Anna(10岁)· 兔子和向日葵都在用它</p>
+<p style="margin:0 0 8px">这串数叫「<b>斐波那契数列</b>」。它来自一个兔子问题:一对兔子每月生一对小兔,小兔长大后也开始生……每个月兔子的对数正好是 1、1、2、3、5、8、13……</p>
+<p style="margin:0"><b>大自然超爱它:</b>向日葵种子的螺旋、松果的鳞片、菠萝的格子,螺旋的数量几乎都是斐波那契数(常见是 34 和 55)。<b>挑战:</b>写出前 10 个数,再去数数松果或向日葵上的螺旋。</p>
+</div>
+
+<div style="margin:0 0 18px;padding:12px 14px;background:#fff7f0;border-radius:10px">
+<p style="margin:0 0 6px;font-weight:700">🧑‍🦱 Annie(12岁)· 藏在数列里的"黄金比"</p>
+<p style="margin:0 0 8px">把相邻两个数相除:8÷5=1.6,13÷8=1.625,21÷13≈1.615,34÷21≈1.619……越往后越接近一个神奇的数 <b>φ≈1.618</b>,叫「<b>黄金比</b>」。</p>
+<p style="margin:0">黄金比被认为特别"耐看",常出现在艺术、建筑甚至人脸比例里。<b>挑战:</b>算 55÷34 和 89÷55,看看是不是都逼近 1.618。</p>
+</div>
+
+<p style="margin:0;padding:12px 14px;background:#fdf6e3;border-radius:10px">😄 <b>全家段子</b> —— 问:为什么小明才 4 岁,就当上"爸爸"了?　答:因为他在玩<b>过家家</b>!</p>
+</div></div><div class="card" data-cat="巧算"><div class="chead"><span class="dot"></span><span>2026-07-08 · 星期三</span><span class="tag">🧮 巧算</span><span class="tag note">数字里藏着的魔法(高斯求和/平方口诀)</span></div><div style="font-family:-apple-system,'PingFang SC','Microsoft YaHei',sans-serif;font-size:16px;line-height:1.7;color:#222;max-width:640px">
 <p style="font-size:18px;font-weight:700;margin:0 0 16px">主题:数字里藏着的魔法</p>
 
 <div style="margin:0 0 18px;padding:12px 14px;background:#f5f8ff;border-radius:10px">
@@ -81,5 +122,90 @@ a:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
 </div>
 
 <p style="margin:0;padding:12px 14px;background:#fdf6e3;border-radius:10px">😄 <b>全家段子</b> —— 问:为什么暑假一定比寒假长?　答:<b>热胀冷缩</b>!</p>
+</div></div><div class="card" data-cat="挑战题"><div class="chead"><span class="dot"></span><span>🧩 挑战题</span><span class="tag extra">哥德巴赫猜想 —— 每个偶数都是两个质数之和?</span><span class="tag note">学有余力做</span></div><div style="font-family:-apple-system,'PingFang SC','Microsoft YaHei',sans-serif;font-size:16px;line-height:1.7;color:#222;max-width:640px">
+<div style="margin:0 0 14px;padding:12px 14px;background:#f5f8ff;border-radius:10px">
+<p style="margin:0 0 4px;font-weight:700">💡 一句话</p>
+<p style="margin:0">任何一个大于 2 的<b>偶数</b>,都能写成<b>两个质数相加</b>。4=2+2,6=3+3,8=3+5,10=3+7,12=5+7……</p>
 </div>
-</div><footer>每天早上自动更新 · 由「每日小课堂」生成</footer></div></body></html>
+<div style="margin:0 0 14px;padding:12px 14px;background:#f2fbf4;border-radius:10px">
+<p style="margin:0 0 4px;font-weight:700">🎮 怎么玩(Leon &amp; Anna)</p>
+<p style="margin:0">随便说一个偶数,把它拆成两个质数之和。试试 <b>20</b>、<b>30</b>、<b>100</b>!(质数 = 只能被 1 和它自己整除的数:2、3、5、7、11、13……)</p>
+</div>
+<div style="margin:0;padding:12px 14px;background:#fff7f0;border-radius:10px">
+<p style="margin:0 0 4px;font-weight:700">🤯 为什么难(Annie)</p>
+<p style="margin:0">话这么简单,却从 <b>1742 年</b>提出到今天快 300 年,<b>没有人能证明它对所有偶数都成立</b>。计算机已经验证到天文数字般大都对,可就是"证"不出来。中国数学家<b>陈景润</b>证明了非常接近的"1+2",已是世界级成果。</p>
+</div>
+</div></div><div class="card" data-cat="挑战题"><div class="chead"><span class="dot"></span><span>🧩 挑战题</span><span class="tag extra">冰雹猜想(3n+1)—— 所有数最后都会掉到 1?</span><span class="tag note">学有余力做</span></div><div style="font-family:-apple-system,'PingFang SC','Microsoft YaHei',sans-serif;font-size:16px;line-height:1.7;color:#222;max-width:640px">
+<div style="margin:0 0 14px;padding:12px 14px;background:#f5f8ff;border-radius:10px">
+<p style="margin:0 0 4px;font-weight:700">💡 规则(超好玩)</p>
+<p style="margin:0">任选一个数:<b>偶数就 ÷2,奇数就 ×3+1</b>,一直重复。传说不管从哪个数开始,最后都会掉到 <b>1</b>(然后 1→4→2→1 转圈圈)。</p>
+</div>
+<div style="margin:0 0 14px;padding:12px 14px;background:#f2fbf4;border-radius:10px">
+<p style="margin:0 0 4px;font-weight:700">🎮 怎么玩(Leon &amp; Anna)</p>
+<p style="margin:0">从 6 开始:6→3→10→5→16→8→4→2→<b>1</b>。挑战:从 <b>7</b> 开始(要走 16 步才到 1!);再试 <b>27</b>——它会一路飙到 <b>9232</b> 再慢慢落地,像坐过山车!</p>
+</div>
+<div style="margin:0;padding:12px 14px;background:#fff7f0;border-radius:10px">
+<p style="margin:0 0 4px;font-weight:700">🤯 为什么难(Annie)</p>
+<p style="margin:0">数字一会儿冲高、一会儿落下,像空中的<b>冰雹</b>,所以叫"冰雹数"。这个猜想 <b>1937 年</b>就提出了,人类用计算机试了无数个数全都掉到 1,可<b>至今没人能证明"每一个数都一定会"</b>。大数学家陶哲轩只做出了非常接近的结果。</p>
+</div>
+</div></div><div class="card" data-cat="挑战题"><div class="chead"><span class="dot"></span><span>🧩 挑战题</span><span class="tag extra">七桥问题 · 一笔画 —— 每座桥只走一次?</span><span class="tag note">学有余力做</span></div><div style="font-family:-apple-system,'PingFang SC','Microsoft YaHei',sans-serif;font-size:16px;line-height:1.7;color:#222;max-width:640px">
+<div style="margin:0 0 14px;padding:12px 14px;background:#f5f8ff;border-radius:10px">
+<p style="margin:0 0 4px;font-weight:700">💡 三百年前的老难题</p>
+<p style="margin:0">一座叫柯尼斯堡的城市有 <b>7 座桥</b>。人们想:能不能从家出发,<b>每座桥只走一次</b>,把 7 座桥全部走遍?试了无数次都失败。</p>
+</div>
+<div style="margin:0 0 14px;padding:12px 14px;background:#f2fbf4;border-radius:10px">
+<p style="margin:0 0 4px;font-weight:700">🎮 怎么玩(Leon &amp; Anna)· 一笔画</p>
+<p style="margin:0">在纸上画点和线,做"<b>一笔画</b>":<b>笔不离纸、每条线只描一遍</b>,把整个图形画完。试试信封"⧖"形、五角星,哪些能画成、哪些画不成?</p>
+</div>
+<div style="margin:0;padding:12px 14px;background:#fff7f0;border-radius:10px">
+<p style="margin:0 0 4px;font-weight:700">🤯 秘诀与难点(Annie)</p>
+<p style="margin:0">大数学家<b>欧拉</b>发现规律:数每个点连出<b>几条线</b>,只有当"连着<b>奇数</b>条线的点"是 <b>0 个或正好 2 个</b>时才画得成。柯尼斯堡 4 块陆地全连着奇数座桥 → <b>根本走不成</b>!这道小题开创了整个数学新分支——<b>图论</b>。</p>
+</div>
+</div></div><div class="card" data-cat="挑战题"><div class="chead"><span class="dot"></span><span>🧩 挑战题</span><span class="tag extra">四色地图 —— 任何地图只用 4 种颜色?</span><span class="tag note">学有余力做</span></div><div style="font-family:-apple-system,'PingFang SC','Microsoft YaHei',sans-serif;font-size:16px;line-height:1.7;color:#222;max-width:640px">
+<div style="margin:0 0 14px;padding:12px 14px;background:#f5f8ff;border-radius:10px">
+<p style="margin:0 0 4px;font-weight:700">💡 一句话</p>
+<p style="margin:0">世界上<b>任何一张地图</b>,只要 <b>4 种颜色</b>,就能让每两个相邻的地区都<b>不同色</b>(只碰一个点不算相邻)。</p>
+</div>
+<div style="margin:0 0 14px;padding:12px 14px;background:#f2fbf4;border-radius:10px">
+<p style="margin:0 0 4px;font-weight:700">🎮 怎么玩(Leon &amp; Anna)</p>
+<p style="margin:0">找一张<b>中国省份图</b>或世界地图,只用 <b>4 支彩笔</b>,把每个地区涂色,让挨着的两块永远不一样。真的能做到吗?自己画一张古怪地图考考爸爸妈妈!</p>
+</div>
+<div style="margin:0;padding:12px 14px;background:#fff7f0;border-radius:10px">
+<p style="margin:0 0 4px;font-weight:700">🤯 为什么难(Annie)</p>
+<p style="margin:0">这个猜想 <b>1852 年</b>就有人提出,却直到 <b>1976 年</b>才被证明——而且是历史上<b>第一个必须靠计算机</b>帮忙完成的著名定理,机器逐一检查了近两千种情形。到今天,还没有人能写出一份纯手工、短小的证明。</p>
+</div>
+</div></div><div class="card" data-cat="挑战题"><div class="chead"><span class="dot"></span><span>🧩 挑战题</span><span class="tag extra">孪生素数猜想 —— 差 2 的&quot;双胞胎质数&quot;有无穷多对?</span><span class="tag note">学有余力做</span></div><div style="font-family:-apple-system,'PingFang SC','Microsoft YaHei',sans-serif;font-size:16px;line-height:1.7;color:#222;max-width:640px">
+<div style="margin:0 0 14px;padding:12px 14px;background:#f5f8ff;border-radius:10px">
+<p style="margin:0 0 4px;font-weight:700">💡 一句话</p>
+<p style="margin:0">相差正好 <b>2</b> 的两个质数,叫"<b>孪生素数</b>"(双胞胎质数),像 (3,5)、(5,7)、(11,13)、(17,19)。</p>
+</div>
+<div style="margin:0 0 14px;padding:12px 14px;background:#f2fbf4;border-radius:10px">
+<p style="margin:0 0 4px;font-weight:700">🎮 怎么玩(Leon &amp; Anna)</p>
+<p style="margin:0">找出 <b>100 以内</b>所有的孪生素数对——一共 <b>8 对</b>,你能全找齐吗?(小提示:先把 100 以内的质数列出来,再看哪两个只差 2。)</p>
+</div>
+<div style="margin:0;padding:12px 14px;background:#fff7f0;border-radius:10px">
+<p style="margin:0 0 4px;font-weight:700">🤯 为什么难(Annie)</p>
+<p style="margin:0">猜想说:这种"双胞胎质数"有<b>无穷多对</b>,永远找得到更大的。可越往大数走,质数越稀少,证明就越难。<b>2013 年</b>华人数学家<b>张益唐</b>证明了"相差不超过 7000 万的质数对有无穷多",轰动世界(后来被缩小到 246);但"<b>正好差 2</b>"至今仍是未解之谜。</p>
+</div>
+</div></div><div class="empty" id="empty">这一类还没有内容,先看看别的吧~</div></main></div><footer>每天早上自动更新 · 由「每日小课堂」生成 · 挑战题会慢慢累积</footer></div><script>
+(function(){
+  var btns=[].slice.call(document.querySelectorAll('.side button'));
+  var cards=[].slice.call(document.querySelectorAll('.card'));
+  var hint=document.getElementById('viewhint');
+  var empty=document.getElementById('empty');
+  var labels={'巧算':'🧮 巧算','科学百科':'🔬 科学百科','名人故事':'👤 名人故事','谜语笑话':'🎭 谜语·笑话','挑战题':'🧩 挑战题'};
+  function apply(f){
+    var shown=0;
+    cards.forEach(function(c){
+      var ok=(f==='all')||(c.getAttribute('data-cat')===f);
+      c.style.display=ok?'':'none'; if(ok)shown++;
+    });
+    btns.forEach(function(b){b.classList.toggle('on',b.getAttribute('data-filter')===f);});
+    if(f==='all'){hint.textContent='按日期显示全部内容(最新在上)。点左侧类别可只看某一类。';}
+    else if(f==='挑战题'){hint.textContent='🧩 挑战题:看着简单、做起来极难的世界名题。学有余力时慢慢挑战。';}
+    else{hint.textContent='正在只看「'+(labels[f]||f)+'」这一类。点「全部」可回到按日期视图。';}
+    empty.style.display=shown?'none':'block';
+  }
+  btns.forEach(function(b){b.addEventListener('click',function(){apply(b.getAttribute('data-filter'));window.scrollTo({top:0,behavior:'smooth'});});});
+})();
+</script></body></html>
